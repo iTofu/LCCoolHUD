@@ -1,0 +1,13 @@
+PODS:
+  - JGProgressHUD (1.3.1)
+  - LCLoadingHUD (1.0.1)
+
+DEPENDENCIES:
+  - JGProgressHUD
+  - LCLoadingHUD
+
+SPEC CHECKSUMS:
+  JGProgressHUD: 153053a21d81208cb5f659691996bcefce6a9885
+  LCLoadingHUD: ed0be1e0d8c5bbdb78fd9b1981a0360649e47f35
+
+COCOAPODS: 0.39.0

@@ -1,0 +1,3 @@
+pod 'JGProgressHUD'
+
+pod 'LCLoadingHUD'
