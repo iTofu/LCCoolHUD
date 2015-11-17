@@ -9,7 +9,10 @@
 
 ## 前言 Foreword
 
-简而言之就是，你们的 HUD 不够 Cool！~ Come here！
+简而言之就是，你们的 HUD 不够 Cool！~ Come here！🆒
+
+
+> LoadingHUD 采用了 [LCLoadingHUD](https://github.com/LeoiOS/LCLoadingHUD)
 
 
 
