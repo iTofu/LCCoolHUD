@@ -37,12 +37,12 @@
 + (void)showFailureOblong:(NSString *)text zoom:(BOOL)zoom shadow:(BOOL)shadow;
 
 /**
- *  显示 HUD 到 KeyWindow 上
+ *  显示 Loading HUD 到 KeyWindow 上
  */
 + (void)showLoading:(NSString *)text;
 
 /**
- *  隐藏添加到 KeyWindow 上的 HUD
+ *  隐藏添加到 KeyWindow 上的 Loading HUD
  */
 + (void)hideInKeyWindow;
 
@@ -66,17 +66,17 @@
 + (void)showSuccessOblong:(NSString *)text inView:(UIView *)view zoom:(BOOL)zoom shadow:(BOOL)shadow;
 
 /**
- *  显示 成功 HUD 到 View 上 (长方形底)
+ *  显示 失败 HUD 到 View 上 (长方形底)
  */
 + (void)showFailureOblong:(NSString *)text inView:(UIView *)view zoom:(BOOL)zoom shadow:(BOOL)shadow;
 
 /**
- *  显示 HUD 到 View 上
+ *  显示 Loading HUD 到 View 上
  */
 + (void)showLoading:(NSString *)text inView:(UIView *)view;
 
 /**
- *  隐藏添加到 View 上的 HUD
+ *  隐藏添加到 View 上的 Loading HUD
  */
 + (void)hideInView:(UIView *)view;
 
