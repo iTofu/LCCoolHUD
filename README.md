@@ -67,8 +67,10 @@
 ## 示例 Examples
 
 ![image](https://github.com/LeoiOS/LCLoadingHUD/blob/master/LCLoadingHUDDemo.png)
-![image]()
-![image]()
+===
+![image](https://github.com/LeoiOS/LCCoolHUD/blob/master/demo1.png)
+===
+![image](https://github.com/LeoiOS/LCCoolHUD/blob/master/demo2.png)
 
 
 
