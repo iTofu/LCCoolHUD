@@ -13,6 +13,7 @@
 
 
 > LoadingHUD 采用了 [LCLoadingHUD](https://github.com/LeoiOS/LCLoadingHUD)。
+> 
 > 如果你不喜欢这个风格，还有另一款 HUD [LCProgressHUD](https://github.com/LeoiOS/LCProgressHUD) 提供给你！
 
 
@@ -56,7 +57,7 @@
     // 隐藏 LoadingHUD
     [LCCoolHUD hideInView:self.view];
     
-    // 其他类似...
+    // 其他类似，加个 inView: 参数即可...
     ````
 * 敲代码会有提示的哦，也要看看，不要埋头就敲哦！
 ![image](https://github.com/LeoiOS/LCCoolHUD/blob/master/tip.png)
