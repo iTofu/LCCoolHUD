@@ -16,8 +16,8 @@
 ## 代码 Code
 
 * 
-- 方法一：[CocoaPods](https://cocoapods.org/) 导入：`pod 'LCCoolHUD'`
-- 方法二：导入`LCCoolHUD`文件夹到你的项目中 (文件夹在 Demo 中可以找到)
+    - 方法一：[CocoaPods](https://cocoapods.org/) 导入：`pod 'LCCoolHUD'`
+    - 方法二：导入`LCCoolHUD`文件夹到你的项目中 (文件夹在 Demo 中可以找到)
 * 在你需要使用的 viewController 中，`#import "LCCoolHUD.h"`;
 * 
     1. HUD 添加到 KeyWindow 上
@@ -54,6 +54,8 @@
     
     // 其他类似...
     ````
+* 敲代码会有提示的哦，也要看看，不要埋头就敲哦！
+![image](https://github.com/LeoiOS/LCCoolHUD/blob/master/tip.png)
 
 
 
@@ -65,6 +67,8 @@
 ## 示例 Examples
 
 ![image](https://github.com/LeoiOS/LCLoadingHUD/blob/master/LCLoadingHUDDemo.png)
+![image]()
+![image]()
 
 
 
