@@ -25,7 +25,7 @@
     - 方法二：导入`LCCoolHUD`文件夹到你的项目中 (文件夹在 Demo 中可以找到)
 * 在你需要使用的 viewController 中，`#import "LCCoolHUD.h"`;
 * 
-    1. HUD 添加到 KeyWindow 上
+  1. HUD 添加到 KeyWindow 上
     ````objc
     // 成功 (动画 + 阴影)
     [LCCoolHUD showSuccess:@"登录成功" zoom:YES shadow:YES];
@@ -46,7 +46,7 @@
     [LCCoolHUD hideInKeyWindow];
     ````
     
-    2. HUD 添加到 View 上
+  2. HUD 添加到 View 上
     ````objc
     // 成功 (长信息、动画)
     [LCCoolHUD showSuccessOblong:@"你可以点 LeftBtn！" inView:self.view zoom:YES shadow:NO];
@@ -67,7 +67,7 @@
 ## 更新日志 2015.11.18 Update Logs (Tag: 1.0.1)
 * 增加对 JGProgressHUD 的 Loading HUD 的支持：
     
-    1. HUD 添加到 KeyWindow 上
+  1. HUD 添加到 KeyWindow 上
     ````objc
     /**
      *  显示 JGProgressHUD 的 Loading HUD
@@ -78,8 +78,10 @@
      *  显示 JGProgressHUD 的 Loading HUD (长方形底)
      */
     + (void)showLoadingOblongWithJGHUD:(NSString *)text zoom:(BOOL)zoom shadow:(BOOL)shadow;
-    
-    2. HUD 添加到 View 上
+    ````
+
+  2. HUD 添加到 View 上
+    ````objc
     /**
      *  显示 JGProgressHUD 的 Loading HUD
      */
@@ -89,10 +91,13 @@
      *  显示 JGProgressHUD 的 Loading HUD (长方形底)
      */
     + (void)showLoadingOblongWithJGHUD:(NSString *)text inView:(UIView *)view zoom:(BOOL)zoom shadow:(BOOL)shadow;
+    ````
     
-    3. 隐藏 JG Loading HUD (KeyWindow InView 通用)
+  3. 隐藏 JG Loading HUD (KeyWindow InView 通用)
+    ````objc
     + (void)hideWithJGHUD;
     ````
+
 > 如果你喜欢这种 Loading HUD，按照上述方法使用即可 :)
 
 
