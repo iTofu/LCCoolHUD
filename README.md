@@ -12,7 +12,7 @@
 简而言之就是，你们的 HUD 不够 Cool！~ Come here！🆒
 
 
-> LoadingHUD 采用了 [LCLoadingHUD](https://github.com/LeoiOS/LCLoadingHUD)。
+> LoadingHUD 采用了 [LCLoadingHUD](https://github.com/LeoiOS/LCLoadingHUD)，如果你只需要 Loading HUD，跳转到 [LCLoadingHUD](https://github.com/LeoiOS/LCLoadingHUD) 吧~
 > 
 > 如果你不喜欢这个风格，还有另一款 HUD [LCProgressHUD](https://github.com/LeoiOS/LCProgressHUD) 提供给你！
 
@@ -45,7 +45,7 @@
     // 隐藏 LoadingHUD
     [LCCoolHUD hideInKeyWindow];
     ````
-    
+
   2. HUD 添加到 View 上
     ````objc
     // 成功 (长信息、动画)
