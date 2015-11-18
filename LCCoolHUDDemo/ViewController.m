@@ -52,15 +52,19 @@
 - (IBAction)showLoading {
     
     [LCCoolHUD showLoading:@"你点不了 LeftBtn"];
-    
+//
     [NSTimer scheduledTimerWithTimeInterval:3.0f target:self selector:@selector(hideKeyWindowHUD) userInfo:nil repeats:NO];
+    
+//    [LCCoolHUD showLoadingWithJGHUD:@"Loading" zoom:YES shadow:YES];
 }
 
 - (IBAction)showLoadingInView {
     
     [LCCoolHUD showLoading:@"你可以点 LeftBtn" inView:self.view];
     
-    [NSTimer scheduledTimerWithTimeInterval:3.0f target:self selector:@selector(hideViewHUD) userInfo:nil repeats:NO];
+    [NSTimer scheduledTimerWithTimeInterval:3.0f target:self selector:@selector(hideInViewHUD) userInfo:nil repeats:NO];
+    
+//    [LCCoolHUD showLoadingWithJGHUD:@"Loading" inView:self.view zoom:NO shadow:NO];
 }
 
 - (void)hideKeyWindowHUD {
@@ -68,9 +72,14 @@
     [LCCoolHUD hideInKeyWindow];
 }
 
-- (void)hideViewHUD {
+- (void)hideInViewHUD {
     
     [LCCoolHUD hideInView:self.view];
+}
+
+- (void)hideWithJGHUD {
+    
+    [LCCoolHUD hideWithJGHUD];
 }
 
 @end

@@ -10,7 +10,41 @@
 #import "JGProgressHUD.h"
 #import "LCLoadingHUD.h"
 
+@interface LCCoolHUD ()
+
+@property (nonatomic, strong) JGProgressHUD *jgHUD;
+
++ (instancetype)shared;
+
+@end
+
 @implementation LCCoolHUD
+
++ (instancetype)shared {
+    
+    static LCCoolHUD *coolHUD = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        coolHUD = [[LCCoolHUD alloc] init];
+    });
+    return coolHUD;
+}
+
+- (instancetype)init {
+    
+    if (self = [super init]) {
+        
+        if (![UIApplication sharedApplication].keyWindow) {
+            
+            NSLog(@"Warning: Your keyWindow is nil!");
+        }
+    }
+    return self;
+}
+
+
+
+#pragma mark - Success
 
 + (void)showSuccess:(NSString *)text zoom:(BOOL)zoom shadow:(BOOL)shadow {
     
@@ -36,38 +70,6 @@
     HUD.textLabel.text = text;
     
     HUD.indicatorView = [[JGProgressHUDSuccessIndicatorView alloc] init];
-    
-    HUD.square = YES;
-    
-    [HUD showInView:view];
-    
-    [HUD dismissAfterDelay:2.0];
-}
-
-+ (void)showFailure:(NSString *)text zoom:(BOOL)zoom shadow:(BOOL)shadow {
-    
-    [self showFailure:text inView:[UIApplication sharedApplication].keyWindow zoom:zoom shadow:shadow];
-}
-
-+ (void)showFailure:(NSString *)text inView:(UIView *)view zoom:(BOOL)zoom shadow:(BOOL)shadow {
-    
-    JGProgressHUD *HUD =  [JGProgressHUD progressHUDWithStyle:JGProgressHUDStyleDark];
-    
-    if (zoom) {
-        JGProgressHUDFadeZoomAnimation *animation = [JGProgressHUDFadeZoomAnimation animation];
-        HUD.animation = animation;
-    }
-    
-    if (shadow) {
-        HUD.HUDView.layer.shadowColor = [UIColor blackColor].CGColor;
-        HUD.HUDView.layer.shadowOffset = CGSizeZero;
-        HUD.HUDView.layer.shadowOpacity = 0.4f;
-        HUD.HUDView.layer.shadowRadius = 8.0f;
-    }
-    
-    HUD.textLabel.text = text;
-    
-    HUD.indicatorView = [[JGProgressHUDErrorIndicatorView alloc] init];
     
     HUD.square = YES;
     
@@ -106,6 +108,42 @@
     [HUD dismissAfterDelay:2.0];
 }
 
+
+
+#pragma mark - Failure
+
++ (void)showFailure:(NSString *)text zoom:(BOOL)zoom shadow:(BOOL)shadow {
+    
+    [self showFailure:text inView:[UIApplication sharedApplication].keyWindow zoom:zoom shadow:shadow];
+}
+
++ (void)showFailure:(NSString *)text inView:(UIView *)view zoom:(BOOL)zoom shadow:(BOOL)shadow {
+    
+    JGProgressHUD *HUD =  [JGProgressHUD progressHUDWithStyle:JGProgressHUDStyleDark];
+    
+    if (zoom) {
+        JGProgressHUDFadeZoomAnimation *animation = [JGProgressHUDFadeZoomAnimation animation];
+        HUD.animation = animation;
+    }
+    
+    if (shadow) {
+        HUD.HUDView.layer.shadowColor = [UIColor blackColor].CGColor;
+        HUD.HUDView.layer.shadowOffset = CGSizeZero;
+        HUD.HUDView.layer.shadowOpacity = 0.4f;
+        HUD.HUDView.layer.shadowRadius = 8.0f;
+    }
+    
+    HUD.textLabel.text = text;
+    
+    HUD.indicatorView = [[JGProgressHUDErrorIndicatorView alloc] init];
+    
+    HUD.square = YES;
+    
+    [HUD showInView:view];
+    
+    [HUD dismissAfterDelay:2.0];
+}
+
 + (void)showFailureOblong:(NSString *)text zoom:(BOOL)zoom shadow:(BOOL)shadow {
     
     [self showFailureOblong:text inView:[UIApplication sharedApplication].keyWindow zoom:zoom shadow:shadow];
@@ -136,6 +174,10 @@
     [HUD dismissAfterDelay:2.0];
 }
 
+
+
+#pragma mark - Loading
+
 + (void)showLoading:(NSString *)text {
     
     [LCLoadingHUD showLoading:text];
@@ -154,6 +196,68 @@
 + (void)hideInView:(id)view {
     
     [LCLoadingHUD hideInView:view];
+}
+
++ (void)showLoadingWithJGHUD:(NSString *)text zoom:(BOOL)zoom shadow:(BOOL)shadow {
+    
+    [self showLoadingWithJGHUD:text inView:[UIApplication sharedApplication].keyWindow zoom:zoom shadow:shadow];
+}
+
++ (void)showLoadingWithJGHUD:(NSString *)text inView:(UIView *)view zoom:(BOOL)zoom shadow:(BOOL)shadow {
+    
+    LCCoolHUD *coolHUD = [LCCoolHUD shared];
+    coolHUD.jgHUD =  [JGProgressHUD progressHUDWithStyle:JGProgressHUDStyleDark];
+    
+    if (zoom) {
+        JGProgressHUDFadeZoomAnimation *animation = [JGProgressHUDFadeZoomAnimation animation];
+        coolHUD.jgHUD.animation = animation;
+    }
+    
+    if (shadow) {
+        coolHUD.jgHUD.HUDView.layer.shadowColor = [UIColor blackColor].CGColor;
+        coolHUD.jgHUD.HUDView.layer.shadowOffset = CGSizeZero;
+        coolHUD.jgHUD.HUDView.layer.shadowOpacity = 0.4f;
+        coolHUD.jgHUD.HUDView.layer.shadowRadius = 8.0f;
+    }
+    
+    coolHUD.jgHUD.textLabel.text = text;
+    
+    coolHUD.jgHUD.square = YES;
+    
+    [coolHUD.jgHUD showInView:view];
+}
+
++ (void)showLoadingOblongWithJGHUD:(NSString *)text zoom:(BOOL)zoom shadow:(BOOL)shadow {
+    
+    [self showLoadingOblongWithJGHUD:text inView:[UIApplication sharedApplication].keyWindow zoom:zoom shadow:shadow];
+}
+
++ (void)showLoadingOblongWithJGHUD:(NSString *)text inView:(UIView *)view zoom:(BOOL)zoom shadow:(BOOL)shadow {
+    
+    LCCoolHUD *coolHUD = [LCCoolHUD shared];
+    coolHUD.jgHUD =  [JGProgressHUD progressHUDWithStyle:JGProgressHUDStyleDark];
+    
+    if (zoom) {
+        JGProgressHUDFadeZoomAnimation *animation = [JGProgressHUDFadeZoomAnimation animation];
+        coolHUD.jgHUD.animation = animation;
+    }
+    
+    if (shadow) {
+        coolHUD.jgHUD.HUDView.layer.shadowColor = [UIColor blackColor].CGColor;
+        coolHUD.jgHUD.HUDView.layer.shadowOffset = CGSizeZero;
+        coolHUD.jgHUD.HUDView.layer.shadowOpacity = 0.4f;
+        coolHUD.jgHUD.HUDView.layer.shadowRadius = 8.0f;
+    }
+    
+    coolHUD.jgHUD.textLabel.text = text;
+    
+    [coolHUD.jgHUD showInView:view];
+}
+
++ (void)hideWithJGHUD {
+    
+    LCCoolHUD *coolHUD = [LCCoolHUD shared];
+    [coolHUD.jgHUD dismissAnimated:YES];
 }
 
 @end

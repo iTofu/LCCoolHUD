@@ -64,7 +64,40 @@
 
 
 
-## 更新日志 2015.11.17 Update Logs (tag: 1.0.0)
+## 更新日志 2015.11.18 Update Logs (Tag: 1.0.1)
+* 增加对 JGProgressHUD 的 Loading HUD 的支持：
+    
+    1. HUD 添加到 KeyWindow 上
+    ````objc
+    /**
+     *  显示 JGProgressHUD 的 Loading HUD
+     */
+    + (void)showLoadingWithJGHUD:(NSString *)text zoom:(BOOL)zoom shadow:(BOOL)shadow;
+    
+    /**
+     *  显示 JGProgressHUD 的 Loading HUD (长方形底)
+     */
+    + (void)showLoadingOblongWithJGHUD:(NSString *)text zoom:(BOOL)zoom shadow:(BOOL)shadow;
+    
+    2. HUD 添加到 View 上
+    /**
+     *  显示 JGProgressHUD 的 Loading HUD
+     */
+    + (void)showLoadingWithJGHUD:(NSString *)text inView:(UIView *)view zoom:(BOOL)zoom shadow:(BOOL)shadow;
+    
+    /**
+     *  显示 JGProgressHUD 的 Loading HUD (长方形底)
+     */
+    + (void)showLoadingOblongWithJGHUD:(NSString *)text inView:(UIView *)view zoom:(BOOL)zoom shadow:(BOOL)shadow;
+    
+    3. 隐藏 JG Loading HUD (KeyWindow InView 通用)
+    + (void)hideWithJGHUD;
+    ````
+> 如果你喜欢这种 Loading HUD，按照上述方法使用即可 :)
+
+
+
+## 更新日志 2015.11.17 Update Logs (Tag: 1.0.0)
 * 初始化提交。
 
 
