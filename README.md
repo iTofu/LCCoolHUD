@@ -65,7 +65,7 @@
 
 
 ## 更新日志 2015.11.18 Update Logs (Tag: 1.0.1)
-* 增加对 JGProgressHUD 的 Loading HUD 的支持：
+* 增加对 [JGProgressHUD](https://github.com/JonasGessner/JGProgressHUD) 的 Loading HUD 的支持：
     
   1. HUD 添加到 KeyWindow 上
     ````objc
