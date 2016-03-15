@@ -1,4 +1,11 @@
 # LCCoolHUD
+
+[![Travis](https://img.shields.io/travis/LeoiOS/LCCoolHUD.svg?style=flat)](https://travis-ci.org/LeoiOS/LCCoolHUD)
+[![CocoaPods](https://img.shields.io/cocoapods/v/LCCoolHUD.svg)](http://cocoadocs.org/docsets/LCCoolHUD)
+[![CocoaPods](https://img.shields.io/cocoapods/l/LCCoolHUD.svg)](https://raw.githubusercontent.com/LeoiOS/LCCoolHUD/master/LICENSE)
+[![CocoaPods](https://img.shields.io/cocoapods/p/LCCoolHUD.svg)](http://cocoadocs.org/docsets/LCCoolHUD)
+[![LeoDev](https://img.shields.io/badge/blog-LeoDev.me-brightgreen.svg)](http://leodev.me)
+
 一款酷酷的 HUD。
 
 ![image](https://github.com/LeoiOS/LCCoolHUD/blob/master/LCCoolHUDDemo.gif)
