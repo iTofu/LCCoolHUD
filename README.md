@@ -33,7 +33,9 @@ In me the tiger sniffs the rose.
 * 两种导入方法：
   - 方法一：[CocoaPods](https://cocoapods.org/) 导入：`pod 'LCCoolHUD'`
   - 方法二：导入`LCCoolHUD`文件夹到你的项目中 (文件夹在 Demo 中可以找到)
+  
 * 在你需要使用的 viewController 中，`#import "LCCoolHUD.h"`;
+
 * 使用：
   1. HUD 添加到 KeyWindow 上
   
