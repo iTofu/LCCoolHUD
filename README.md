@@ -32,7 +32,7 @@ In me the tiger sniffs the rose.
 
 * 两种导入方法：
   - 方法一：[CocoaPods](https://cocoapods.org/) 导入：`pod 'LCCoolHUD'`
-  - 方法二：导入`LCCoolHUD`文件夹到你的项目中 (文件夹在 Demo 中可以找到)
+  - 方法二：把 `LCCoolHUD` 文件夹拖拽到你的项目中 (文件夹在 Demo 中可以找到)
 
 * 在你需要使用的 viewController 中，`#import "LCCoolHUD.h"`;
 
@@ -80,7 +80,7 @@ In me the tiger sniffs the rose.
 
 
 
-## 更新日志 Update Logs
+## 版本 Release
 
 ### V 1.0.3 (2016.04.05)
 
@@ -125,7 +125,7 @@ In me the tiger sniffs the rose.
     + (void)hideWithJGHUD;
     ````
 
-> 如果你喜欢这种 Loading HUD，按照上述方法使用即可 :)
+  > 如果你喜欢这种 Loading HUD，按照上述方法使用即可 :)
 
 
 
@@ -147,7 +147,7 @@ In me the tiger sniffs the rose.
 
 ## 联系 Support
 
-* 发现问题请 Issue :)
+* 发现问题请直接 [new issue](https://github.com/iTofu/LCCoolHUD/issues/new) :)
 
 * Mail: devtip@163.com
 
